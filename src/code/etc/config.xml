@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Loewenstark_RemoveUnconfirmedCustomers>
+            <version>1.0.0.0</version>
+        </Loewenstark_RemoveUnconfirmedCustomers>
+    </modules>
+    <global>
+        <models>
+            <loerucm>
+                <class>Loewenstark_RemoveUnconfirmedCustomers_Model</class>
+            </loerucm>
+        </models>
+    </global>
+    <crontab>
+        <jobs>
+            <loerucm_remove_customers>
+                <schedule>
+                    <cron_expr>45 3 * * *</cron_expr>
+                </schedule>
+                <run>
+                    <model>loerucm/observer::run</model>
+                </run>
+            </loerucm_remove_customers>
+        </jobs>
+    </crontab>
+</config>

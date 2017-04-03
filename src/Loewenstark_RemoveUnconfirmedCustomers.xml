@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Loewenstark_RemoveUnconfirmedCustomers>
+            <active>true</active>
+            <codePool>community</codePool>
+            <depends>
+                <Mage_Core />
+                <Mage_Customer />
+            </depends>
+        </Loewenstark_RemoveUnconfirmedCustomers>
+    </modules>
+</config>
